@@ -42,18 +42,21 @@ function array_random(numbers, difficulty) {
   }
   return array_rand
 }
-
+// -------------------------------------
 var numeriCPU = array_random(16, parseInt(prompt('Inserisci una difficoltà')));
 console.log(numeriCPU);
 var numeroUtente = parseInt(prompt('Inserisci un numero'))
 if (numeroUtente > massimo) {
   alert('errore')
 }
-
+// -------------------------------------
 var count = [];
 while (!numeriCPU.includes(numeroUtente) && count.length < (massimo - 16 - 1)) {
     numeroUtente = parseInt(prompt('Inserisci un altro numero'));
     count.push(numeroUtente);
+    if (count.includes(numeroUtente)) {
+      alert('errore, numero ripetuto due volte')
+    }
 }
 console.log(count);
 var tentativi = count.length + 1;
