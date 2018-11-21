@@ -29,10 +29,10 @@ console.log(numbers1);
 console.log(numbers2);
 
 function equal_arr(arr1, arr2) {
-    while (arr2.length < arr1.length) {
-      arr2.push(random_int_number(100, 200))
-    }
-    return arr2
+  while (arr2.length < arr1.length) {
+    arr2.push(random_int_number(100, 200));
+  }
+  return arr2
 }
 
 var result = equal_arr(numbers1, numbers2);

@@ -16,7 +16,7 @@ var numbers = array_random_20();
 var somma = 0;
 for (var i = 0; i < numbers.length; i++) {
   if (i % 2 !== 0) {
-      somma = somma + numbers[i];
+    somma = somma + numbers[i];
   }
 }
 console.log(somma);

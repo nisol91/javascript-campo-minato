@@ -46,17 +46,19 @@ function array_random(numbers, difficulty) {
 var numeriCPU = array_random(16, parseInt(prompt('Inserisci una difficoltà')));
 console.log(numeriCPU);
 var numeroUtente = parseInt(prompt('Inserisci un numero'))
-if (numeroUtente > massimo) {
+if (numeroUtente > massimo) {//qui credo di aver usato massimo come variabile globale, perche non l ho mai definita con var, ne dentro la funzione ne fuori, e infatti cosi facendo quando scrivo massimo fuori dalla funzione e' la stessa variabile che dentro la funzione e la riconosce. E' globale e quindi e' la stessa ovunque.
   alert('errore')
 }
 // -------------------------------------
 var count = [];
 while (!numeriCPU.includes(numeroUtente) && count.length < (massimo - 16 - 1)) {
-    numeroUtente = parseInt(prompt('Inserisci un altro numero'));
-    count.push(numeroUtente);
-    if (count.includes(numeroUtente)) {
+  numeroUtente = parseInt(prompt('Inserisci un altro numero'));
+  count.push(numeroUtente);
+  for (var i = 0; i < count.length - 1; i++) {
+    if (count[i] == numeroUtente) {
       alert('errore, numero ripetuto due volte')
     }
+  }
 }
 console.log(count);
 var tentativi = count.length + 1;
