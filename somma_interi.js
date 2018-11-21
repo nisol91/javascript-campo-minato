@@ -1,3 +1,5 @@
+//somma i numeri che sono in posizione dispari dell array
+
 
 function array_random_20() {
   function random_int_number(min, max) {

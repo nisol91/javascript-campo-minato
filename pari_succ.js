@@ -1,3 +1,5 @@
+//inserisci un numero, se e' pari stampalo, se e' dispari stampa il successivo
+
 var numero = parseInt(prompt('Inserisci un numero'));
 
 
